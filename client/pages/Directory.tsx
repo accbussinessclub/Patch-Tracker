@@ -190,9 +190,9 @@ export default function Directory() {
             />
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Select value={selectedVendor} onValueChange={setSelectedVendor}>
-              <SelectTrigger className="w-48">
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Filter by vendor" />
               </SelectTrigger>
               <SelectContent>
@@ -206,7 +206,7 @@ export default function Directory() {
             </Select>
 
             <Select value={selectedStatus} onValueChange={setSelectedStatus}>
-              <SelectTrigger className="w-48">
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Filter by status" />
               </SelectTrigger>
               <SelectContent>
@@ -218,7 +218,7 @@ export default function Directory() {
             </Select>
 
             <Select value={selectedYear} onValueChange={setSelectedYear}>
-              <SelectTrigger className="w-48">
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Filter by year" />
               </SelectTrigger>
               <SelectContent>

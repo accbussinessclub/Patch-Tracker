@@ -582,11 +582,9 @@ export default function RegisterSystem() {
                       render={({ field }) => (
                         <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                           <FormControl>
-                            <input
-                              type="checkbox"
+                            <Checkbox
                               checked={field.value}
-                              onChange={field.onChange}
-                              className="mt-1"
+                              onCheckedChange={field.onChange}
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">
@@ -605,11 +603,9 @@ export default function RegisterSystem() {
                       render={({ field }) => (
                         <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                           <FormControl>
-                            <input
-                              type="checkbox"
+                            <Checkbox
                               checked={field.value}
-                              onChange={field.onChange}
-                              className="mt-1"
+                              onCheckedChange={field.onChange}
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">

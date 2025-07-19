@@ -57,6 +57,33 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Security-focused brand colors
+        security: {
+          50: "hsl(var(--security-50))",
+          100: "hsl(var(--security-100))",
+          200: "hsl(var(--security-200))",
+          300: "hsl(var(--security-300))",
+          400: "hsl(var(--security-400))",
+          500: "hsl(var(--security-500))",
+          600: "hsl(var(--security-600))",
+          700: "hsl(var(--security-700))",
+          800: "hsl(var(--security-800))",
+          900: "hsl(var(--security-900))",
+        },
+        warning: {
+          50: "hsl(var(--warning-50))",
+          100: "hsl(var(--warning-100))",
+          500: "hsl(var(--warning-500))",
+          600: "hsl(var(--warning-600))",
+          700: "hsl(var(--warning-700))",
+        },
+        success: {
+          50: "hsl(var(--success-50))",
+          100: "hsl(var(--success-100))",
+          500: "hsl(var(--success-500))",
+          600: "hsl(var(--success-600))",
+          700: "hsl(var(--success-700))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

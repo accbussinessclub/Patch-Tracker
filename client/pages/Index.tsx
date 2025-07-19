@@ -23,7 +23,7 @@ export default function Index() {
                 <Shield className="h-10 w-10 text-primary-foreground" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
               Securing Cultural Heritage
               <span className="block text-primary">Through Community</span>
             </h1>

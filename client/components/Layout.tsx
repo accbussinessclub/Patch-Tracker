@@ -1,5 +1,14 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Shield, Search, Plus, FileText, Settings } from "lucide-react";
+import {
+  Shield,
+  Search,
+  Plus,
+  FileText,
+  Settings,
+  Menu,
+  X,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface LayoutProps {
@@ -8,9 +17,14 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (

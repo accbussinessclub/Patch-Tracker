@@ -33,14 +33,19 @@ export default function Index() {
               systems. Join our mission to protect cultural heritage through
               collaborative security.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button asChild size="lg" className="h-12 px-8">
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="h-12 px-8 w-full sm:w-auto">
                 <Link to="/directory">
                   <Search className="mr-2 h-5 w-5" />
                   Browse Systems
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="h-12 px-8">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="h-12 px-8 w-full sm:w-auto"
+              >
                 <Link to="/register">
                   <Plus className="mr-2 h-5 w-5" />
                   Register System

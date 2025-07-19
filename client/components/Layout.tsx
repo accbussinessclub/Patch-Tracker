@@ -94,22 +94,78 @@ export function Layout({ children }: LayoutProps) {
             </nav>
 
             {/* Mobile menu button */}
-            <button className="md:hidden">
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/95">
+              <nav className="px-4 py-4 space-y-4">
+                <Link
+                  to="/directory"
+                  onClick={closeMobileMenu}
+                  className={cn(
+                    "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                    isActive("/directory")
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+                  )}
+                >
+                  <Search className="h-5 w-5" />
+                  <span>Directory</span>
+                </Link>
+                <Link
+                  to="/register"
+                  onClick={closeMobileMenu}
+                  className={cn(
+                    "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                    isActive("/register")
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+                  )}
+                >
+                  <Plus className="h-5 w-5" />
+                  <span>Register System</span>
+                </Link>
+                <Link
+                  to="/submit-fix"
+                  onClick={closeMobileMenu}
+                  className={cn(
+                    "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                    isActive("/submit-fix")
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+                  )}
+                >
+                  <FileText className="h-5 w-5" />
+                  <span>Submit Fix</span>
+                </Link>
+                <Link
+                  to="/admin"
+                  onClick={closeMobileMenu}
+                  className={cn(
+                    "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                    isActive("/admin")
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+                  )}
+                >
+                  <Settings className="h-5 w-5" />
+                  <span>Admin</span>
+                </Link>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
